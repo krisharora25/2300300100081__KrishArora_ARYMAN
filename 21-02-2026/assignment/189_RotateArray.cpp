@@ -1,3 +1,8 @@
+#include <iostream>
+#include <vector>
+
+using namespace std;
+
 class Solution {
 public:
     void rotate(vector<int>& nums, int k) {
@@ -20,3 +25,30 @@ public:
         }
     }
 };
+
+int main() {
+    Solution obj;
+    int n, k;
+
+    cout << "Enter number of elements: ";
+    cin >> n;
+
+    vector<int> nums(n);
+    cout << "Enter elements: ";
+    for(int i = 0; i < n; i++) {
+        cin >> nums[i];
+    }
+
+    cout << "Enter k (number of rotations): ";
+    cin >> k;
+
+    obj.rotate(nums, k);
+
+    cout << "Array after rotation: ";
+    for(int num : nums) {
+        cout << num << " ";
+    }
+    cout << endl;
+
+    return 0;
+}
